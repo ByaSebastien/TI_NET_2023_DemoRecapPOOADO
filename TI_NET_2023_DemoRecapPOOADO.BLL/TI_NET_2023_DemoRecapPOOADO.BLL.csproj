@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\TI_NET_2023_DemoRecapPOOADO.DAL\TI_NET_2023_DemoRecapPOOADO.DAL.csproj" />
+    <ProjectReference Include="..\TI_NET_2023_DemoRecapPOOADO.Domain\TI_NET_2023_DemoRecapPOOADO.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

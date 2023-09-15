@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33424.131
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TI_NET_2023_DemoRecapPOOADO", "TI_NET_2023_DemoRecapPOOADO\TI_NET_2023_DemoRecapPOOADO.csproj", "{6BEFF22C-69F1-4DC7-B24C-80C562740230}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TI_NET_2023_DemoRecapPOOADO.BLL", "TI_NET_2023_DemoRecapPOOADO.BLL\TI_NET_2023_DemoRecapPOOADO.BLL.csproj", "{E2A800DC-B06B-4097-92C6-56D4D1E19912}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TI_NET_2023_DemoRecapPOOADO.DAL", "TI_NET_2023_DemoRecapPOOADO.DAL\TI_NET_2023_DemoRecapPOOADO.DAL.csproj", "{DC5A214A-DD15-48E2-BA12-B1ACC69FB411}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TI_NET_2023_DemoRecapPOOADO.Domain", "TI_NET_2023_DemoRecapPOOADO.Domain\TI_NET_2023_DemoRecapPOOADO.Domain.csproj", "{4B04FA1D-0747-43B5-8B98-22E9EC9B6DDD}"
+EndProject
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "TI_NET_2023_DemoRecapPOOADO.Database", "TI_NET_2023_DemoRecapPOOADO.Database\TI_NET_2023_DemoRecapPOOADO.Database.sqlproj", "{36791F7E-4AE2-4EA7-ABDA-A5870BF8365C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BEFF22C-69F1-4DC7-B24C-80C562740230}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BEFF22C-69F1-4DC7-B24C-80C562740230}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BEFF22C-69F1-4DC7-B24C-80C562740230}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BEFF22C-69F1-4DC7-B24C-80C562740230}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2A800DC-B06B-4097-92C6-56D4D1E19912}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2A800DC-B06B-4097-92C6-56D4D1E19912}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2A800DC-B06B-4097-92C6-56D4D1E19912}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2A800DC-B06B-4097-92C6-56D4D1E19912}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC5A214A-DD15-48E2-BA12-B1ACC69FB411}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC5A214A-DD15-48E2-BA12-B1ACC69FB411}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC5A214A-DD15-48E2-BA12-B1ACC69FB411}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC5A214A-DD15-48E2-BA12-B1ACC69FB411}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4B04FA1D-0747-43B5-8B98-22E9EC9B6DDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4B04FA1D-0747-43B5-8B98-22E9EC9B6DDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4B04FA1D-0747-43B5-8B98-22E9EC9B6DDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4B04FA1D-0747-43B5-8B98-22E9EC9B6DDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36791F7E-4AE2-4EA7-ABDA-A5870BF8365C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36791F7E-4AE2-4EA7-ABDA-A5870BF8365C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36791F7E-4AE2-4EA7-ABDA-A5870BF8365C}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{36791F7E-4AE2-4EA7-ABDA-A5870BF8365C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36791F7E-4AE2-4EA7-ABDA-A5870BF8365C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36791F7E-4AE2-4EA7-ABDA-A5870BF8365C}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A4E5125D-E4BD-429C-AEC8-473C48936896}
+	EndGlobalSection
+EndGlobal
