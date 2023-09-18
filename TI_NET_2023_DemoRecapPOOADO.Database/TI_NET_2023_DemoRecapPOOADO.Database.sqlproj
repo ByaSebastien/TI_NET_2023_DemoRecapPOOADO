@@ -60,6 +60,7 @@
   <ItemGroup>
     <Build Include="Product.sql" />
     <Build Include="Member.sql" />
+    <Build Include="Food.sql" />
   </ItemGroup>
   <ItemGroup>
     <None Include="TI_NET_2023_DemoRecapPOOADO.Database.publish.xml" />

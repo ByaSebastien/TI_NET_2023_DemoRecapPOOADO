@@ -7,7 +7,7 @@ using TI_NET_2023_DemoRecapPOOADO.Domain.Entities;
 
 namespace TI_NET_2023_DemoRecapPOOADO.DAL.Repositories
 {
-    public interface IProductRepository : IBaseRepository<int,Product>
+    public interface IFoodRepository : IBaseRepository<int, Food>
     {
     }
 }
