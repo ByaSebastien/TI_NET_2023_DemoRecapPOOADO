@@ -30,5 +30,18 @@ namespace TI_NET_2023_DemoRecapPOOADO.FakeControllers
                 return null;
             }
         }
+
+        public List<ProductShortDTO> GetAll()
+        {
+            //IEnumerable<Product> products = _productService.GetAll();
+            //List<ProductShortDTO> productShorts = new List<ProductShortDTO>();
+            //foreach (Product product in products)
+            //{
+            //    productShorts.Add(product.toShortDTO());
+            //}
+            //return productShorts;
+
+            return _productService.GetAll().Select(p => p.toShortDTO()).ToList();
+        }
     }
 }

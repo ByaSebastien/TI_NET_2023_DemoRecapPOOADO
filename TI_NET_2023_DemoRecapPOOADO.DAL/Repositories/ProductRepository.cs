@@ -58,7 +58,7 @@ namespace TI_NET_2023_DemoRecapPOOADO.DAL.Repositories
                     GenerateParameter(cmd, "@category", product.Category);
                     GenerateParameter(cmd, "@price", product.Price);
 
-                    connection.Open();
+                    OpenConnection(connection);
 
                     IDataReader reader = cmd.ExecuteReader();
 
@@ -76,24 +76,106 @@ namespace TI_NET_2023_DemoRecapPOOADO.DAL.Repositories
             }
         }
 
-        public bool Delete(int id)
-        {
-            throw new NotImplementedException();
-        }
-
         public IEnumerable<Product> ReadAll()
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new SqlConnection(_connectionString))
+            {
+                using (IDbCommand cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM product";
+                    OpenConnection(connection);
+                    IDataReader reader = cmd.ExecuteReader();
+
+                    while(reader.Read())
+                    {
+                        yield return Convert(reader);
+                    }
+                }
+            }
         }
 
         public Product ReadOne(int id)
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new SqlConnection(_connectionString))
+            {
+                using (IDbCommand cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "SELECT * FROM product WHERE Id = @id";
+                    GenerateParameter(cmd, "@id", id);
+                    OpenConnection(connection);
+                    IDataReader reader = cmd.ExecuteReader();
+
+                    if (!reader.Read())
+                    {
+                        throw new KeyNotFoundException();
+                    }
+
+                    Product product = Convert(reader);
+                    connection.Close();
+                    return product;
+                }
+            }
         }
 
         public bool Update(int id, Product product)
         {
-            throw new NotImplementedException();
+            using (IDbConnection connection = new SqlConnection(_connectionString))
+            {
+                using (IDbCommand cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "UPDATE PRODUCT " +
+                                      "SET product_name = @name, " +
+                                          "product_description = @description, " +
+                                          "quantity = @quantity" +
+                                          "category = @category" +
+                                          "price = @price " +
+                                      "WHERE Id = @id";
+                    GenerateParameter(cmd, "@name", product.Name);
+                    GenerateParameter(cmd, "@description", product.Description);
+                    GenerateParameter(cmd, "@quantity", product.Quantity);
+                    GenerateParameter(cmd, "@category", product.Category);
+                    GenerateParameter(cmd, "@price", product.Price);
+                    GenerateParameter(cmd, "@id", id);
+
+                    OpenConnection(connection);
+
+                    int nbRow = cmd.ExecuteNonQuery();
+
+                    connection.Close();
+
+                    return nbRow == 1;
+                }
+            }
+        }
+
+        public bool Delete(int id)
+        {
+            using (IDbConnection connection = new SqlConnection(_connectionString))
+            {
+                using (IDbCommand cmd = connection.CreateCommand())
+                {
+                    cmd.CommandText = "DELETE FROM product " +
+                                      "WHERE Id = @id";
+                    GenerateParameter(cmd, "@id", id);
+
+                    OpenConnection(connection);
+
+                    int nbRow = cmd.ExecuteNonQuery();
+
+                    connection.Close();
+
+                    return nbRow == 1;
+                }
+            }
+        }
+
+        public void OpenConnection(IDbConnection connection)
+        {
+            if(connection.State == ConnectionState.Open)
+            {
+                connection.Close();
+            }
+            connection.Open();
         }
     }
 }

@@ -21,5 +21,15 @@ namespace TI_NET_2023_DemoRecapPOOADO.Domain.Mappers
                 Price = dto.Price
             };
         }
+
+        public static ProductShortDTO toShortDTO(this Product product)
+        {
+            return new ProductShortDTO
+            {
+                Id = product.Id,
+                Name = product.Name,
+                Prix = product.Price
+            };
+        }
     }
 }

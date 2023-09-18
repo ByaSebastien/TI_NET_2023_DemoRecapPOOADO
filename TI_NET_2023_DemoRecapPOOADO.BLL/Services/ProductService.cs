@@ -21,5 +21,10 @@ namespace TI_NET_2023_DemoRecapPOOADO.BLL.Services
         {
             return _productRepository.Create(product);
         }
+
+        public IEnumerable<Product> GetAll()
+        {
+            return _productRepository.ReadAll();
+        }
     }
 }
